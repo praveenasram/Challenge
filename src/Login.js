@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, FormControl, ControlLabel, PageHeader } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import './App.css';
 
 class Login extends Component {
@@ -25,36 +25,35 @@ class Login extends Component {
 		
 	    event.preventDefault();
 	  }
-
 	
-  render() {
-    return (
+    render() {
+      return (
 		<div className="Login">
 			
-			<PageHeader className="App-header"> Please Login for React JS Tutorials </PageHeader>
+			<div>
+	        <header className="App-header">
+	          <h1 className="App-title">Welcome to Login Page</h1>          
+	        </header>	        
+	        </div>
 			
 	        <form onSubmit={this.handleSubmit}>
 	        
 		        <FormGroup controlId="email" bsSize="large">
 		          <ControlLabel>Email</ControlLabel>
-		          <FormControl autoFocus type="email" value={this.state.email} onChange={this.handleChange}/>
+		          <FormControl className="Label-style" autoFocus type="email" value={this.state.email} onChange={this.handleChange}/>
 		        </FormGroup>
 		          
 		        <FormGroup controlId="password" bsSize="large">
 		          <ControlLabel>Password</ControlLabel>
-		          <FormControl value={this.state.password} onChange={this.handleChange} type="password"/>
+		          <FormControl className="Label-style" value={this.state.password} onChange={this.handleChange} type="password"/>
 		        </FormGroup>
 		        
-		        <Button block bsSize="large" disabled={!this.validateForm()} type="submit"> Login </Button>
+		        <button className="Button-style" disabled={!this.validateForm()} type="submit"> Login </button>
 		        
-	        </form>
+	        </form>       
 	        
-	        <p className="App-intro">Terms & Conditions</p>	        
-	        
-      </div>    	   
-      
+      </div> 
     );
   }
 }
 export default Login;
-//ReactDOM.render(<Index />, document.getElementById('root'));

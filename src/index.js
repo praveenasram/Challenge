@@ -19,8 +19,8 @@ class Index extends Component {
 		});
 	}
 	
-  render() {	
-    return (
+   render() {	
+       return (
 		<div className="App">
       		<div>
 		        <header className="App-header">
@@ -29,11 +29,11 @@ class Index extends Component {
 	        </div>
 	        
 	        <div>
-	          <Button bsSize="large" name='login' onClick = {this.loadAnotherView}>Login</Button>	
+	          <button  className="Button-style" name='login' onClick = {this.loadAnotherView}>Login</button>	
 	        </div>
 	      	
 	        <div>
-	      		<Button name='register' onClick = {this.loadAnotherView}>Register</Button>
+	      		<button className="Button-style" name='register' onClick = {this.loadAnotherView}>Register</button>
 	      	</div>
 	      	
 	      	{this.state.isLoginPage ? <Login/> : <Registration/>}
